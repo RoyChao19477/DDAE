@@ -81,4 +81,4 @@ checkpointer = ModelCheckpoint(
 						verbose=0,
 						save_best_only=True)
 print 'training...'    
-hist=model.fit(X_train, y_train, epochs=EPOCH, batch_size=BATCHSIZE, verbose=1,shuffle="batch", callbacks=[checkpointer])
+hist=model.fit(X_train, y_train, nb_epoch=EPOCH, batch_size=BATCHSIZE, verbose=1,shuffle="batch", callbacks=[checkpointer])

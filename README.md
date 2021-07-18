@@ -9,6 +9,14 @@
 - librosa
 - scipy
 
+## Run (2021/07/18 RoyChao)
+- `conda create --name py27 python=2.7`
+- `conda activate py27`
+- `pip install tensorflow=1.2`
+- (maybe)`pip install keras=1.2.2`
+- `pip install librosa`
+- then run commands below
+
 ## Getting Started:
 
 Extract spectrogram features:
