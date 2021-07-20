@@ -14,7 +14,8 @@
 - `conda activate py27`
 - `pip install tensorflow=1.2`
 - (maybe)`pip install keras=1.2.2`
-- `pip install librosa`
+- `pip install librosa==0.3.1`
+- `pip install scikit-learn==0.16.1`
 - then run commands below
 
 ## Getting Started:
