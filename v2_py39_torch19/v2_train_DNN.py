@@ -61,7 +61,7 @@ model = torch.nn.Sequential(
         torch.nn.Linear(2048, 257)
         )
 
-optimizer = torch.optim.Adam(model.parameters(), lr=0.0002, betas=(0.9, 0.999), eps=1e-08, weight_decay=0)
+optimizer = torch.optim.Adam(model.parameters(), lr=0.0002, betas=(0.9, 0.999), eps=1e-08, weight_decay=0.0002)
 loss_fn = torch.nn.MSELoss()
 
 for t in range(EPOCH):
@@ -75,12 +75,11 @@ for t in range(EPOCH):
             y = batch[1]
 
 
+        optimizer.zero_grad()
         y_pred = model(x)
-
         # Compute loss
         loss = loss_fn(y_pred, y)
 
-        optimizer.zero_grad()
         loss.backward()
         optimizer.step()
 
