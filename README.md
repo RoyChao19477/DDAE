@@ -1,9 +1,15 @@
 # DDAE speech enhancement
-
 **Hyper-parameters are not tuned to optimal**
 
+## Fork 
+DDAE is reproduced with PyTorch in this repo.
 
-## fork: 2021/07/18 RoyChao
+## Run with python3.9 and pytorch1.5
+- `pip install -r v2_py39_torch19/requirements.txt`
+- `python v2_py39_torch19/v2_spectrum.py data.h5 list_noisy list_clean`
+- `python v2_py39_torch19/v2_train_DNN.py data.h5`
+- `python v2_py39_torch19/v2_test_gen_spec.py DDAE.pt list_noisy`
+
 ## Run with python2 and tensorflow 1
 - `conda create --name py27 python=2.7`
 - `conda activate py27`
@@ -13,11 +19,6 @@
 - `pip install scikit-learn==0.16.1`
 - then run commands below ("Getting Started")
 
-## Run with python3.9 and pytorch1.5
-- `pip install -r v2_py39_torch19/requirements.txt`
-- `python v2_py39_torch19/v2_spectrum.py data.h5 list_noisy list_clean`
-- `python v2_py39_torch19/v2_train_DNN.py data.h5`
-- `python v2_py39_torch19/v2_test_gen_spec.py DDAE.pt list_noisy`
 
 
 ## Prerequisites:
